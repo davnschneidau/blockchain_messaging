@@ -11,11 +11,11 @@ There are still some tasks to complete...those can be found in the `things_to_ad
 
 To run the app one must open a terminal window and run the  `blockchain\app.py` then open another deparate terminal window and run the `client\app.py` file. 
 If you want to send messages between users you must open two separate instances of `client\app.py` and in one of them change the port in the main function to 5002
-```
+```{python}
 if __name__ == "__main__":
     app.run(
         host='127.0.0.1',
-        port='5000',
+        port='5002',
         debug='True',
     )
 ```
