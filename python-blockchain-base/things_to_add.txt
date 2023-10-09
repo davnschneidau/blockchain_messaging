@@ -1,0 +1,8 @@
+Things I think still need to be added...
+
+- a messging component of every block node in the blockchain directory
+- encryption of the message before it is included in the json blockchian element
+- additional structure to support cross computer functionality
+
+
+(feel free Zeke to add more things you see that might need to be added)
