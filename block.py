@@ -37,7 +37,7 @@ class Block(object):
 
   def update_self_hash(self):
     sha = hashlib.sha256()
-    sha.update(self.header_string())
+    sha.update(self.header_string().encode('utf-8'))
     new_hash = sha.hexdigest()
     self.hash = new_hash
     return new_hash
@@ -91,6 +91,11 @@ class Block(object):
 
   def is_valid(self):
     self.update_self_hash()
+    NUM_ZEROS = self.hash.count('0')
+    print(str(self.hash))
+    print(str(self.hash[0:NUM_ZEROS]))
+    print('0' * NUM_ZEROS)
+
     if str(self.hash[0:NUM_ZEROS]) == '0' * NUM_ZEROS:
       return True
     else:
